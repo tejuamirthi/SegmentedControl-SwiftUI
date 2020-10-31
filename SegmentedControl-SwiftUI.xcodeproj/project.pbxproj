@@ -13,9 +13,35 @@
 		6028BAC0254D7C6900ECEE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6028BABF254D7C6900ECEE66 /* Assets.xcassets */; };
 		6028BAC3254D7C6900ECEE66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6028BAC2254D7C6900ECEE66 /* Preview Assets.xcassets */; };
 		6028BAC6254D7C6900ECEE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6028BAC4254D7C6900ECEE66 /* LaunchScreen.storyboard */; };
+		6028BACC254D7CD400ECEE66 /* SegmentedControl_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6073AA77254C891A00678EDE /* SegmentedControl_SwiftUI.framework */; };
+		6028BACD254D7CD400ECEE66 /* SegmentedControl_SwiftUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6073AA77254C891A00678EDE /* SegmentedControl_SwiftUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6073AA7C254C891A00678EDE /* SegmentedControl_SwiftUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6073AA7A254C891A00678EDE /* SegmentedControl_SwiftUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6073AA83254C89D600678EDE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073AA82254C89D600678EDE /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6028BACE254D7CD400ECEE66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6073AA6E254C891A00678EDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6073AA76254C891A00678EDE;
+			remoteInfo = "SegmentedControl-SwiftUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6028BAD0254D7CD400ECEE66 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6028BACD254D7CD400ECEE66 /* SegmentedControl_SwiftUI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		6028BAB7254D7C6900ECEE66 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6028BACC254D7CD400ECEE66 /* SegmentedControl_SwiftUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +99,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6028BACB254D7CD400ECEE66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6073AA6D254C891A00678EDE = {
 			isa = PBXGroup;
 			children = (
 				6073AA79254C891A00678EDE /* SegmentedControl-SwiftUI */,
 				6028BAB8254D7C6900ECEE66 /* Example */,
 				6073AA78254C891A00678EDE /* Products */,
+				6028BACB254D7CD400ECEE66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,10 +156,12 @@
 				6028BAB3254D7C6900ECEE66 /* Sources */,
 				6028BAB4254D7C6900ECEE66 /* Frameworks */,
 				6028BAB5254D7C6900ECEE66 /* Resources */,
+				6028BAD0254D7CD400ECEE66 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6028BACF254D7CD400ECEE66 /* PBXTargetDependency */,
 			);
 			name = Example;
 			productName = Example;
@@ -227,6 +264,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6028BACF254D7CD400ECEE66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6073AA76254C891A00678EDE /* SegmentedControl-SwiftUI */;
+			targetProxy = 6028BACE254D7CD400ECEE66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6028BAC4254D7C6900ECEE66 /* LaunchScreen.storyboard */ = {

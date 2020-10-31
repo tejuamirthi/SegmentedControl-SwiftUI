@@ -7,10 +7,11 @@
 //
 
 import SwiftUI
+import SegmentedControl_SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        SegmentedControlView()
     }
 }
 
