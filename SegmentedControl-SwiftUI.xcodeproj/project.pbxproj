@@ -7,11 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6028BABA254D7C6900ECEE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028BAB9254D7C6900ECEE66 /* AppDelegate.swift */; };
+		6028BABC254D7C6900ECEE66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028BABB254D7C6900ECEE66 /* SceneDelegate.swift */; };
+		6028BABE254D7C6900ECEE66 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6028BABD254D7C6900ECEE66 /* ContentView.swift */; };
+		6028BAC0254D7C6900ECEE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6028BABF254D7C6900ECEE66 /* Assets.xcassets */; };
+		6028BAC3254D7C6900ECEE66 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6028BAC2254D7C6900ECEE66 /* Preview Assets.xcassets */; };
+		6028BAC6254D7C6900ECEE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6028BAC4254D7C6900ECEE66 /* LaunchScreen.storyboard */; };
 		6073AA7C254C891A00678EDE /* SegmentedControl_SwiftUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 6073AA7A254C891A00678EDE /* SegmentedControl_SwiftUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6073AA83254C89D600678EDE /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6073AA82254C89D600678EDE /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6028BAB7254D7C6900ECEE66 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6028BAB9254D7C6900ECEE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6028BABB254D7C6900ECEE66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6028BABD254D7C6900ECEE66 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6028BABF254D7C6900ECEE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6028BAC2254D7C6900ECEE66 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6028BAC5254D7C6900ECEE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6028BAC7254D7C6900ECEE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6073AA77254C891A00678EDE /* SegmentedControl_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SegmentedControl_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6073AA7A254C891A00678EDE /* SegmentedControl_SwiftUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentedControl_SwiftUI.h; sourceTree = "<group>"; };
 		6073AA7B254C891A00678EDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -19,6 +33,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6028BAB4254D7C6900ECEE66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6073AA74254C891A00678EDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6028BAB8254D7C6900ECEE66 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6028BAB9254D7C6900ECEE66 /* AppDelegate.swift */,
+				6028BABB254D7C6900ECEE66 /* SceneDelegate.swift */,
+				6028BABD254D7C6900ECEE66 /* ContentView.swift */,
+				6028BABF254D7C6900ECEE66 /* Assets.xcassets */,
+				6028BAC4254D7C6900ECEE66 /* LaunchScreen.storyboard */,
+				6028BAC7254D7C6900ECEE66 /* Info.plist */,
+				6028BAC1254D7C6900ECEE66 /* Preview Content */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6028BAC1254D7C6900ECEE66 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6028BAC2254D7C6900ECEE66 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		6073AA6D254C891A00678EDE = {
 			isa = PBXGroup;
 			children = (
 				6073AA79254C891A00678EDE /* SegmentedControl-SwiftUI */,
+				6028BAB8254D7C6900ECEE66 /* Example */,
 				6073AA78254C891A00678EDE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				6073AA77254C891A00678EDE /* SegmentedControl_SwiftUI.framework */,
+				6028BAB7254D7C6900ECEE66 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +114,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		6028BAB6254D7C6900ECEE66 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6028BACA254D7C6900ECEE66 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				6028BAB3254D7C6900ECEE66 /* Sources */,
+				6028BAB4254D7C6900ECEE66 /* Frameworks */,
+				6028BAB5254D7C6900ECEE66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 6028BAB7254D7C6900ECEE66 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
 		6073AA76254C891A00678EDE /* SegmentedControl-SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6073AA7F254C891A00678EDE /* Build configuration list for PBXNativeTarget "SegmentedControl-SwiftUI" */;
@@ -93,9 +155,13 @@
 		6073AA6E254C891A00678EDE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Amirthy Tejeshwar";
 				TargetAttributes = {
+					6028BAB6254D7C6900ECEE66 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					6073AA76254C891A00678EDE = {
 						CreatedOnToolsVersion = 11.3.1;
 						LastSwiftMigration = 1130;
@@ -116,11 +182,22 @@
 			projectRoot = "";
 			targets = (
 				6073AA76254C891A00678EDE /* SegmentedControl-SwiftUI */,
+				6028BAB6254D7C6900ECEE66 /* Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6028BAB5254D7C6900ECEE66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6028BAC6254D7C6900ECEE66 /* LaunchScreen.storyboard in Resources */,
+				6028BAC3254D7C6900ECEE66 /* Preview Assets.xcassets in Resources */,
+				6028BAC0254D7C6900ECEE66 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6073AA75254C891A00678EDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +208,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6028BAB3254D7C6900ECEE66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6028BABA254D7C6900ECEE66 /* AppDelegate.swift in Sources */,
+				6028BABC254D7C6900ECEE66 /* SceneDelegate.swift in Sources */,
+				6028BABE254D7C6900ECEE66 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6073AA73254C891A00678EDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,7 +228,58 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		6028BAC4254D7C6900ECEE66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6028BAC5254D7C6900ECEE66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		6028BAC8254D7C6900ECEE66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_TEAM = WKXQ3PNHR6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tejuamirthi.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6028BAC9254D7C6900ECEE66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Example/Preview Content\"";
+				DEVELOPMENT_TEAM = WKXQ3PNHR6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tejuamirthi.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6073AA7D254C891A00678EDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -318,6 +456,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6028BACA254D7C6900ECEE66 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6028BAC8254D7C6900ECEE66 /* Debug */,
+				6028BAC9254D7C6900ECEE66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6073AA71254C891A00678EDE /* Build configuration list for PBXProject "SegmentedControl-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
