@@ -43,15 +43,25 @@ public struct SegmentedControlView: View {
     }
     
     public var body: some View {
-        return VStack {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(0..<self.segments.data.count) { index in
-                        RowDataView(selectedIndex: $selectedIndex, index: index, data: self.segments.data[index], animation: animation)
+        return NavigationView {
+            VStack {
+                ScrollViewReader { scrollView in
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack {
+                            ForEach(0..<self.segments.data.count) { index in
+                                RowDataView(selectedIndex: $selectedIndex, index: index, data: self.segments.data[index], animation: animation)
+                                .id(index)
+                            }
+                        }.aspectRatio(contentMode: ContentMode.fill)
                     }
-                }.aspectRatio(contentMode: ContentMode.fill)
+                    .onChange(of: selectedIndex) { index in
+                        withAnimation {
+                            scrollView.scrollTo(index)
+                        }
+                    }
+                }
+                Spacer()
             }
-            Spacer()
         }
     }
 }
@@ -90,6 +100,7 @@ struct RowDataView: View {
                     }
                 }
             }
+            .buttonStyle(PlainButtonStyle())
             .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
     }
 }
