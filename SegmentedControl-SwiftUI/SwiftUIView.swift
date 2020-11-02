@@ -24,10 +24,10 @@ public struct Segments {
         
     }
     var data: [Segment] = [
-    .init(title: "Title 1"),
-    .init(title: "Title 2"),
-    .init(title: "Very large title 3"),
-    .init(title: "Can't imagine this long title"),
+        .init(title: "Title 1"),
+        .init(title: "Title 2"),
+        .init(title: "Very large title 3"),
+        .init(title: "Can't imagine this long title"),
         .init(title: "5th title too long")
     ]
 }
@@ -50,7 +50,7 @@ public struct SegmentedControlView: View {
                         HStack {
                             ForEach(0..<self.segments.data.count) { index in
                                 RowDataView(selectedIndex: $selectedIndex, index: index, data: self.segments.data[index], animation: animation)
-                                .id(index)
+                                    .id(index)
                             }
                         }.aspectRatio(contentMode: ContentMode.fill)
                     }
@@ -76,32 +76,32 @@ struct RowDataView: View {
     var body: some View {
         let view: some View = RoundedRectangle(cornerRadius: 16)
             .stroke(Color.black, lineWidth: 2)
-
+        
         return Button(action: {
             withAnimation {
                 selectedIndex = index
             }
-            }) {
-                ZStack {
-                    if selectedIndex == index {
-                        Text(data.title ?? "Hey ya")
-                            .padding()
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .cornerRadius(16)
-                            .matchedGeometryEffect(id: /*@START_MENU_TOKEN@*/"ID"/*@END_MENU_TOKEN@*/, in: animation)
-                    } else {
-                        Text(data.title ?? "Hey ya")
-                            .padding()
-                            .background(Color.white)
-                            .foregroundColor(.black)
-                            .cornerRadius(16)
-                            .overlay(view)
-                    }
+        }) {
+            ZStack {
+                if selectedIndex == index {
+                    Text(data.title ?? "Hey ya")
+                        .padding()
+                        .background(Color.black)
+                        .foregroundColor(.white)
+                        .cornerRadius(16)
+                        .matchedGeometryEffect(id: /*@START_MENU_TOKEN@*/"ID"/*@END_MENU_TOKEN@*/, in: animation)
+                } else {
+                    Text(data.title ?? "Hey ya")
+                        .padding()
+                        .background(Color.white)
+                        .foregroundColor(.black)
+                        .cornerRadius(16)
+                        .overlay(view)
                 }
             }
-            .buttonStyle(PlainButtonStyle())
-            .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
+        }
+        .buttonStyle(PlainButtonStyle())
+        .padding(EdgeInsets(top: 4, leading: 0, bottom: 4, trailing: 0))
     }
 }
 
@@ -113,7 +113,7 @@ struct SegmentedControlView_Previews: PreviewProvider {
 
 
 public extension View {
-
+    
     func `if`<Content: View>(_ conditional: Bool, trueContent: ((Self) -> Content)? = nil, falseContent: ((Self) -> Content)? = nil) -> some View {
         if conditional, let content = trueContent {
             return AnyView(content(self))
