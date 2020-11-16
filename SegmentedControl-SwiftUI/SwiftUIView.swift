@@ -20,8 +20,10 @@ struct Segment {
 }
 
 public struct Segments {
-    public init() {
-        
+    public init(list: [String]) {
+        data = list.map { (value) in
+            .init(title: value)
+        }
     }
     var data: [Segment] = [
         .init(title: "Title 1"),
@@ -34,33 +36,28 @@ public struct Segments {
 
 public struct SegmentedControlView: View {
     
-    var segments: Segments = Segments()
+    private var segments: Segments
     @State var selectedIndex = 0
     @Namespace var animation
     
-    public init() {
-        
+    public init(list: [String]) {
+        segments = Segments(list: list)
     }
     
     public var body: some View {
-        return NavigationView {
-            VStack {
-                ScrollViewReader { scrollView in
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(0..<self.segments.data.count) { index in
-                                RowDataView(selectedIndex: $selectedIndex, index: index, data: self.segments.data[index], animation: animation)
-                                    .id(index)
-                            }
-                        }.aspectRatio(contentMode: ContentMode.fill)
+        ScrollViewReader { scrollView in
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(0..<self.segments.data.count) { index in
+                        RowDataView(selectedIndex: $selectedIndex, index: index, data: self.segments.data[index], animation: animation)
+                            .id(index)
                     }
-                    .onChange(of: selectedIndex) { index in
-                        withAnimation {
-                            scrollView.scrollTo(index)
-                        }
-                    }
+                }.aspectRatio(contentMode: ContentMode.fill)
+            }
+            .onChange(of: selectedIndex) { index in
+                withAnimation {
+                    scrollView.scrollTo(index)
                 }
-                Spacer()
             }
         }
     }
