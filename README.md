@@ -4,5 +4,4 @@ SegmentedControl for iOS using SwiftUI
 
 Screenshot of the project
 
-Screen Recording 2020-11-16 at 21.40.38.gif
-![Alt Text](https://github.com/tejuamirthi/SegmentedControl-SwiftUI/blob/main/Screen%20Recording%202020-11-16%20at%2021.40.38.gif)
+<img src="Screen Recording 2020-11-16 at 21.49.53.gif" width = "230px" height = "500px"/>
