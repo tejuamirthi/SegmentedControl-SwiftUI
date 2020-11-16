@@ -11,7 +11,7 @@ import SegmentedControl_SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        SegmentedControlView()
+        SegmentedControlView(list: ["Title", "Segments","Title3", "Title4", "Title5"])
     }
 }
 

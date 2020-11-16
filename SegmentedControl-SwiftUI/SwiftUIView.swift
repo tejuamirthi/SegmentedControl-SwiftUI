@@ -104,7 +104,7 @@ struct RowDataView: View {
 
 struct SegmentedControlView_Previews: PreviewProvider {
     static var previews: some View {
-        SegmentedControlView()
+        SegmentedControlView(list: ["Title 1","Title 2"])
     }
 }
 
